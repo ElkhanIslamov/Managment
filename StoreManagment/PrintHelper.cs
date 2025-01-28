@@ -69,5 +69,19 @@ namespace StoreManagment
 
             Console.WriteLine(new string('-', 80));
         }
+        internal static void PrintSeller(Seller[] sellers)
+        {
+            Console.WriteLine(new string('-', 80));
+            Console.WriteLine($"{"Id",-6}{"Name",-20}");
+            Console.WriteLine(new string('-', 80));
+
+            foreach (Seller seller in sellers)
+            {
+                if (seller == null) continue;
+
+                Console.WriteLine($"{seller.Id,-6}{seller.Name,-20}");
+            }
+            Console.WriteLine(new string('-', 80));
+        }
     }
 }
